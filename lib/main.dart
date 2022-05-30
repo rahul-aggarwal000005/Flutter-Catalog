@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/pages/home_page.dart';
 import 'package:flutter_catalog/pages/login_page.dart';
+import 'package:flutter_catalog/utils/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: "Flutter Catalog",
+        // debugShowCheckedModeBanner: false,
         // home: HomePage(),
         // theme: ThemeData(
         // fontFamily: GoogleFonts.lato().fontFamily,
@@ -24,8 +26,9 @@ class MyApp extends StatelessWidget {
         ),
         initialRoute: "/login",
         routes: {
-          "/login": (context) => const LoginPage(),
           "/": (context) => const HomePage(),
+          MyRoutes.loginRoute: (context) => const LoginPage(),
+          MyRoutes.homeRoute: (context) => const HomePage(),
         });
   }
 }
