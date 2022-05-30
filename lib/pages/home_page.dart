@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
   final int days = 30;
-  final String course_name = 'Flutter Tutorial';
+  final String courseName = 'Flutter Tutorial';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Flutter Catalog"),
+        title: const Text("Catalog App"),
       ),
       body: Center(
         child: Container(
-          child: Text("$days days of $course_name"),
+          child: Text("$days days of $courseName"),
         ),
       ),
     );
