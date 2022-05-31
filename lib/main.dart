@@ -14,15 +14,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: "Flutter Catalog",
-        // debugShowCheckedModeBanner: false,
-        // home: HomePage(),
-        // theme: ThemeData(
-        // fontFamily: GoogleFonts.lato().fontFamily,
-        // ),
         themeMode: ThemeMode.dark,
         darkTheme: ThemeData(
           primarySwatch: Colors.red,
-          // brightness: Brightness.dark,
         ),
         initialRoute: "/login",
         routes: {
