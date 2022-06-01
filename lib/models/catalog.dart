@@ -9,18 +9,20 @@ class Item {
 
   Item(this.id, this.title, this.price, this.description, this.category,
       this.image, this.rating);
+
+  factory Item.fromMap(Map<String, dynamic> map) {
+    return Item(
+      map["id"],
+      map["title"],
+      map["price"].toDouble(),
+      map["description"],
+      map["category"],
+      map["image"],
+      map["rating"],
+    );
+  }
 }
 
 class CatalogModel {
-  static final items = [
-    Item(
-      1,
-      "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-      10.3,
-      "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-      "men's clothing",
-      "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-      {"rate": 3.9, "count": 120},
-    )
-  ];
+  static var items = [];
 }

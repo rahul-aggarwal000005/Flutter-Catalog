@@ -14,8 +14,8 @@ class ItemWidget extends StatelessWidget {
           print("Item is ${item.title} pressed");
         },
         leading: Image.network(item.image),
-        title: Text('${item.title.substring(0, 20)} ...'),
-        subtitle: Text('${item.description.substring(0, 20)} ...'),
+        title: Text(item.title.substring(0, 10)),
+        subtitle: Text(item.description.substring(0, 10)),
         trailing: Text(
           '₹ ${item.price.toString()}',
           style: const TextStyle(
